@@ -1,14 +1,9 @@
-'''Your work is to allow people to enter the queue one by one. But, there
- is a catch, there are priority members, whom you need to allow to enter 
- first.
-In front of the bar, you installed an old metal stick and added a circuit 
-to it so it can connect to the internal computer of the bar.
+'''Your work is to allow people to enter the queue one by one. But, there is a catch, there are priority members, whom you need to allow to enter first. 
+In front of the bar, you installed an old metal stick and added a circuit to it so it can connect to the internal computer of the bar.
 
-Now you start coding up programs so that the metal stick will shift when 
-someone should enter else it would remain straight blocking the entrance.
+Now you start coding up programs so that the metal stick will shift when someone should enter else it would remain straight blocking the entrance.
 
-Moreover, you also saw that there are many people who come and join the
-queue at the front without going to the back, the stick shouldn't allow 
+Moreover, you also saw that there are many people who come and join the queue at the front without going to the back, the stick shouldn't allow 
 such actions and would not move if they don't go and stand at the back of 
 the queue. Finally, you also need to set up the priority member entrance 
 routine to the program to make it exactly similar to your work. 
@@ -58,17 +53,17 @@ class Q:
     if person is a float or int, else if it is a list or a tuple, 
     extend the class attribute data to add each element of person to it.'''
     
-#     def enqueue(self, person):
-#             if isinstance(person, int) or isinstance(person, float):
-#                 self.data.append(person)
-#             elif isinstance(person, list) or isinstance(person, tuple):
-#                 self.data.extend(person)
+    def enqueue(self, person):
+            if isinstance(person, int) or isinstance(person, float):
+                self.data.append(person)
+            elif isinstance(person, list) or isinstance(person, tuple):
+                self.data.extend(person)
 
-#     def is_member(self, person):
-#         if person in self.data:
-#             return True
-#         else:
-#             return False
+    def is_member(self, person):
+        if person in self.data:
+            return True
+        else:
+            return False
         
 # '''
 # Exercise 7.2: Managing Priorities

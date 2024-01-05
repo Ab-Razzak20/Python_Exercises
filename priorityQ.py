@@ -4,38 +4,32 @@ In front of the bar, you installed an old metal stick and added a circuit to it 
 Now you start coding up programs so that the metal stick will shift when someone should enter else it would remain straight blocking the entrance.
 
 Moreover, you also saw that there are many people who come and join the queue at the front without going to the back, the stick shouldn't allow 
-such actions and would not move if they don't go and stand at the back of 
-the queue. Finally, you also need to set up the priority member entrance 
+such actions and would not move if they don't go and stand at the back of the queue. Finally, you also need to set up the priority member entrance 
 routine to the program to make it exactly similar to your work. 
+'''
 
-
-Exercise 7.1: Managing Queue
-To make your metal stick maintain the queue (or line), you define a class Queue.
-In this Queue class you need to do the following task, so that the metal performs 
-the task similar to you being a bouncer.
+### Exercise 7.1: Managing Queue ###
+'''
+To make your metal stick maintain the queue (or line), you define a class Queue. In this Queue class you need to do the following task, so that the metal 
+performs the task similar to you being a bouncer.
 
 Tasks
 
-- The metal stick must know who are there in the queue. 
-For that reason, initialize a constructor which receives an argument data of the 
-datatype list. 
+- The metal stick must know who are there in the queue. For that reason, initialize a constructor which receives an argument data of the datatype list. 
 Store this argument as a class attribute, data, for further use.'''
+
 class Q:
-    def __init__(self, data=[]): # initialize a constructor which receives an argument data
-                                 # of the datatype list
-        self.data = data        # Store this argument as a class attribute, data, 
-                                # for further use
+    def __init__(self, data=[]): 
+        ''' initialize a constructor which receives an argument data of the datatype list. 
+            Store this argument as a class attribute, data, for further use '''
+        self.data = data        # class attributes are variables stored within the class 
+                                # such that they are accessible to all other methods of a class. 
  
-        # class attributes are variables stored within the class such that they are 
-        # accessible to all other methods of a class. 
+      
     '''
-    - Your stick must let each person from the queue enter. 
-    For this, you must create a method named dequeue(self). 
-    It doesn't need to receive any argument, but it must update the 
-    class attribute data at the end. The dequeue method must check if the 
-    class attribute data is not empty. If it is not empty, 
-    it should remove the first element from data and return it. 
-    If data is empty, it should return None.'''
+    - The stick must let each person from the queue enter. For this, you must create a method named dequeue(self). It doesn't need to receive any argument, 
+    but it must update the class attribute data at the end. The dequeue method must check if the class attribute data is not empty. If it is not empty, 
+    it should remove the first element from data and return it. If data is empty, it should return None.'''
 
     def dequeue(self):
             if len(self.data)==0:
@@ -44,6 +38,7 @@ class Q:
                 return self.data[0]
             
             del self.data[0]
+            
     '''- Now you must make a solution for adding people who are coming late at the end 
     of the queue. 
     There might be single people or a group of people who are coming and joining the queue. 

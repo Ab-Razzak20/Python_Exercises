@@ -70,4 +70,4 @@ def paint_binary_v2(floor_num):
 
 print(paint_binary(3))
 print(paint_binary_v2(11))
-Assignment
+
